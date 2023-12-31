@@ -1,0 +1,15 @@
+2023-12-31 17:37: Namespace(adj_norm=False, batch_size=64, cuda=True, dataset='PEMS08', debug=False, device='cuda:0', early_stop=True, early_stop_patience=15, embed_dim=14, epochs=20, grad_norm=False, in_steps=12, input_dim=3, log_dir='D:\\program\\python\\MGSTGNN\\exps/logs\\PEMS08\\20231231173753', log_step=20, loss_func='mae', lr_decay=True, lr_decay_rate=0.3, lr_decay_step='15,35,35', lr_init=0.006, mae_thresh=None, mape_thresh=0.0, max_grad_norm=5, mode='test', model='MGSTGNN', normalizer='std', num_grus=[1, 2], num_input_dim=1, num_nodes=170, out_steps=12, output_dim=1, periods=288, periods_embedding_dim=14, plot=False, predict_time=2, random=False, real_value=True, rnn_units=64, seed=10, test_ratio=0.2, use_back=True, val_ratio=0.2, weekend=7, weekend_embedding_dim=14)
+2023-12-31 17:37: Experiment log path in: D:\program\python\MGSTGNN\exps/logs\PEMS08\20231231173753
+2023-12-31 17:38: Horizon 01, MAE: 12.3496, RMSE: 19.7461, MAPE: 8.0936%
+2023-12-31 17:38: Horizon 02, MAE: 12.7092, RMSE: 20.7188, MAPE: 8.2967%
+2023-12-31 17:38: Horizon 03, MAE: 13.0880, RMSE: 21.5126, MAPE: 8.5685%
+2023-12-31 17:38: Horizon 04, MAE: 13.4142, RMSE: 22.2343, MAPE: 8.7658%
+2023-12-31 17:38: Horizon 05, MAE: 13.7134, RMSE: 22.8303, MAPE: 9.0226%
+2023-12-31 17:38: Horizon 06, MAE: 13.9449, RMSE: 23.3472, MAPE: 9.1323%
+2023-12-31 17:38: Horizon 07, MAE: 14.1908, RMSE: 23.8337, MAPE: 9.2994%
+2023-12-31 17:38: Horizon 08, MAE: 14.4103, RMSE: 24.2394, MAPE: 9.5268%
+2023-12-31 17:38: Horizon 09, MAE: 14.6378, RMSE: 24.6023, MAPE: 9.6024%
+2023-12-31 17:38: Horizon 10, MAE: 14.8410, RMSE: 24.9251, MAPE: 9.7634%
+2023-12-31 17:38: Horizon 11, MAE: 15.0648, RMSE: 25.2098, MAPE: 10.0117%
+2023-12-31 17:38: Horizon 12, MAE: 15.3938, RMSE: 25.6874, MAPE: 10.2038%
+2023-12-31 17:38: Average Horizon, MAE: 13.9798, RMSE: 23.3098, MAPE: 9.1906%

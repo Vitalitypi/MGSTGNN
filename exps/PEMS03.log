@@ -1,0 +1,387 @@
+/mnt/workspace
+Namespace(dataset='PEMS03', mode='train', device='cuda:0', debug=False, model='MGSTGNN', cuda=True, val_ratio=0.2, test_ratio=0.2, in_steps=12, out_steps=12, num_nodes=358, normalizer='std', adj_norm=False, input_dim=3, num_input_dim=1, periods_embedding_dim=12, weekend_embedding_dim=0, output_dim=1, embed_dim=12, rnn_units=64, num_grus=[1, 1], periods=288, weekend=7, predict_time=2, use_back=True, loss_func='mae', random=False, seed=10, batch_size=64, epochs=20, lr_init=0.006, lr_decay=True, lr_decay_rate=0.06, lr_decay_step='10,20,40,70', early_stop=True, early_stop_patience=15, grad_norm=False, max_grad_norm=5, real_value=True, mae_thresh=None, mape_thresh=0.1, log_dir='./', log_step=20, plot=False)
+*****************Model Parameter*****************
+mgstgnn.encoder.node_embeddings torch.Size([358, 12]) True
+mgstgnn.encoder.time_embeddings torch.Size([64, 12, 12]) True
+mgstgnn.encoder.periods_embedding.weight torch.Size([288, 12]) True
+mgstgnn.predictor.grus.0.gate.weights_pool torch.Size([12, 2, 65, 128]) True
+mgstgnn.predictor.grus.0.gate.bias_pool torch.Size([12, 128]) True
+mgstgnn.predictor.grus.0.gate.norm.weight torch.Size([12]) True
+mgstgnn.predictor.grus.0.gate.norm.bias torch.Size([12]) True
+mgstgnn.predictor.grus.0.update.weights_pool torch.Size([12, 2, 65, 64]) True
+mgstgnn.predictor.grus.0.update.bias_pool torch.Size([12, 64]) True
+mgstgnn.predictor.grus.0.update.norm.weight torch.Size([12]) True
+mgstgnn.predictor.grus.0.update.norm.bias torch.Size([12]) True
+mgstgnn.predictor.grus.1.gate.weights_pool torch.Size([12, 2, 65, 128]) True
+mgstgnn.predictor.grus.1.gate.bias_pool torch.Size([12, 128]) True
+mgstgnn.predictor.grus.1.gate.norm.weight torch.Size([12]) True
+mgstgnn.predictor.grus.1.gate.norm.bias torch.Size([12]) True
+mgstgnn.predictor.grus.1.update.weights_pool torch.Size([12, 2, 65, 64]) True
+mgstgnn.predictor.grus.1.update.bias_pool torch.Size([12, 64]) True
+mgstgnn.predictor.grus.1.update.norm.weight torch.Size([12]) True
+mgstgnn.predictor.grus.1.update.norm.bias torch.Size([12]) True
+mgstgnn.predictor.backs.0.weight torch.Size([1, 64]) True
+mgstgnn.predictor.backs.0.bias torch.Size([1]) True
+mgstgnn.predictor.backs.1.weight torch.Size([1, 64]) True
+mgstgnn.predictor.backs.1.bias torch.Size([1]) True
+mgstgnn.predictor.predictors.0.weight torch.Size([12, 2, 1, 64]) True
+mgstgnn.predictor.predictors.0.bias torch.Size([12]) True
+mgstgnn.predictor.predictors.1.weight torch.Size([12, 2, 1, 64]) True
+mgstgnn.predictor.predictors.1.bias torch.Size([12]) True
+mgstgnn.predictor.skips.0.weight torch.Size([12, 2, 1, 64]) True
+mgstgnn.predictor.skips.0.bias torch.Size([12]) True
+Total params num: 625486
+*****************Finish Parameter****************
+(26208, 358, 1)
+Train:  (15702, 12, 358, 3) (15702, 12, 358, 1)
+Val:  (5219, 12, 358, 3) (5219, 12, 358, 1)
+Test:  (5218, 12, 358, 3) (5218, 12, 358, 1)
+Applying learning rate decay.
+Creat Log File in:  /mnt/workspace/MGSTGNN/exps/logs/PEMS03/20231207205955/run.log
+2023-12-07 20:59: Namespace(dataset='PEMS03', mode='train', device='cuda:0', debug=False, model='MGSTGNN', cuda=True, val_ratio=0.2, test_ratio=0.2, in_steps=12, out_steps=12, num_nodes=358, normalizer='std', adj_norm=False, input_dim=3, num_input_dim=1, periods_embedding_dim=12, weekend_embedding_dim=0, output_dim=1, embed_dim=12, rnn_units=64, num_grus=[1, 1], periods=288, weekend=7, predict_time=2, use_back=True, loss_func='mae', random=False, seed=10, batch_size=64, epochs=20, lr_init=0.006, lr_decay=True, lr_decay_rate=0.06, lr_decay_step='10,20,40,70', early_stop=True, early_stop_patience=15, grad_norm=False, max_grad_norm=5, real_value=True, mae_thresh=None, mape_thresh=0.1, log_dir='/mnt/workspace/MGSTGNN/exps/logs/PEMS03/20231207205955', log_step=20, plot=False)
+2023-12-07 20:59: Experiment log path in: /mnt/workspace/MGSTGNN/exps/logs/PEMS03/20231207205955
+2023-12-07 21:00: Train Epoch 1: 20/245 Generator Loss: 36.586823
+2023-12-07 21:00: Train Epoch 1: 40/245 Generator Loss: 25.427896
+2023-12-07 21:00: Train Epoch 1: 60/245 Generator Loss: 21.745251
+2023-12-07 21:00: Train Epoch 1: 80/245 Generator Loss: 20.223907
+2023-12-07 21:00: Train Epoch 1: 100/245 Generator Loss: 20.762428
+2023-12-07 21:00: Train Epoch 1: 120/245 Generator Loss: 20.642570
+2023-12-07 21:00: Train Epoch 1: 140/245 Generator Loss: 20.837269
+2023-12-07 21:00: Train Epoch 1: 160/245 Generator Loss: 20.018412
+2023-12-07 21:00: Train Epoch 1: 180/245 Generator Loss: 19.876608
+2023-12-07 21:00: Train Epoch 1: 200/245 Generator Loss: 18.910847
+2023-12-07 21:00: Train Epoch 1: 220/245 Generator Loss: 18.493868
+2023-12-07 21:01: Train Epoch 1: 240/245 Generator Loss: 17.737623
+2023-12-07 21:01: **********Train Epoch 1: Averaged Generator Loss: 27.069695
+2023-12-07 21:01: **********Val Epoch 1: average Loss: 17.415884
+2023-12-07 21:01: **********test Epoch 1: average Loss: 17.133656
+2023-12-07 21:01: *********************************Current best model saved!
+2023-12-07 21:01: Train Epoch 2: 20/245 Generator Loss: 19.228003
+2023-12-07 21:01: Train Epoch 2: 40/245 Generator Loss: 18.300938
+2023-12-07 21:01: Train Epoch 2: 60/245 Generator Loss: 18.237898
+2023-12-07 21:01: Train Epoch 2: 80/245 Generator Loss: 17.267946
+2023-12-07 21:01: Train Epoch 2: 100/245 Generator Loss: 16.666401
+2023-12-07 21:01: Train Epoch 2: 120/245 Generator Loss: 16.482929
+2023-12-07 21:01: Train Epoch 2: 140/245 Generator Loss: 17.509048
+2023-12-07 21:01: Train Epoch 2: 160/245 Generator Loss: 17.333181
+2023-12-07 21:01: Train Epoch 2: 180/245 Generator Loss: 17.613695
+2023-12-07 21:02: Train Epoch 2: 200/245 Generator Loss: 17.431530
+2023-12-07 21:02: Train Epoch 2: 220/245 Generator Loss: 16.218077
+2023-12-07 21:02: Train Epoch 2: 240/245 Generator Loss: 16.836193
+2023-12-07 21:02: **********Train Epoch 2: Averaged Generator Loss: 17.286651
+2023-12-07 21:02: **********Val Epoch 2: average Loss: 16.226162
+2023-12-07 21:02: **********test Epoch 2: average Loss: 16.182601
+2023-12-07 21:02: *********************************Current best model saved!
+2023-12-07 21:02: Train Epoch 3: 20/245 Generator Loss: 17.180367
+2023-12-07 21:02: Train Epoch 3: 40/245 Generator Loss: 17.057510
+2023-12-07 21:02: Train Epoch 3: 60/245 Generator Loss: 16.155092
+2023-12-07 21:02: Train Epoch 3: 80/245 Generator Loss: 16.991758
+2023-12-07 21:02: Train Epoch 3: 100/245 Generator Loss: 16.380896
+2023-12-07 21:02: Train Epoch 3: 120/245 Generator Loss: 16.417564
+2023-12-07 21:03: Train Epoch 3: 140/245 Generator Loss: 15.553436
+2023-12-07 21:03: Train Epoch 3: 160/245 Generator Loss: 16.670454
+2023-12-07 21:03: Train Epoch 3: 180/245 Generator Loss: 15.322779
+2023-12-07 21:03: Train Epoch 3: 200/245 Generator Loss: 15.979689
+2023-12-07 21:03: Train Epoch 3: 220/245 Generator Loss: 16.293468
+2023-12-07 21:03: Train Epoch 3: 240/245 Generator Loss: 16.012953
+2023-12-07 21:03: **********Train Epoch 3: Averaged Generator Loss: 16.131473
+2023-12-07 21:03: **********Val Epoch 3: average Loss: 15.617957
+2023-12-07 21:03: **********test Epoch 3: average Loss: 15.701500
+2023-12-07 21:03: *********************************Current best model saved!
+2023-12-07 21:03: Train Epoch 4: 20/245 Generator Loss: 16.013544
+2023-12-07 21:03: Train Epoch 4: 40/245 Generator Loss: 15.344656
+2023-12-07 21:03: Train Epoch 4: 60/245 Generator Loss: 15.862369
+2023-12-07 21:03: Train Epoch 4: 80/245 Generator Loss: 16.665874
+2023-12-07 21:04: Train Epoch 4: 100/245 Generator Loss: 17.363886
+2023-12-07 21:04: Train Epoch 4: 120/245 Generator Loss: 14.518325
+2023-12-07 21:04: Train Epoch 4: 140/245 Generator Loss: 15.078221
+2023-12-07 21:04: Train Epoch 4: 160/245 Generator Loss: 15.266571
+2023-12-07 21:04: Train Epoch 4: 180/245 Generator Loss: 14.492438
+2023-12-07 21:04: Train Epoch 4: 200/245 Generator Loss: 15.005466
+2023-12-07 21:04: Train Epoch 4: 220/245 Generator Loss: 14.585996
+2023-12-07 21:04: Train Epoch 4: 240/245 Generator Loss: 15.147736
+2023-12-07 21:04: **********Train Epoch 4: Averaged Generator Loss: 15.389661
+2023-12-07 21:04: **********Val Epoch 4: average Loss: 15.175982
+2023-12-07 21:04: **********test Epoch 4: average Loss: 15.431564
+2023-12-07 21:04: *********************************Current best model saved!
+2023-12-07 21:04: Train Epoch 5: 20/245 Generator Loss: 15.299297
+2023-12-07 21:04: Train Epoch 5: 40/245 Generator Loss: 16.081108
+2023-12-07 21:05: Train Epoch 5: 60/245 Generator Loss: 14.657685
+2023-12-07 21:05: Train Epoch 5: 80/245 Generator Loss: 15.311729
+2023-12-07 21:05: Train Epoch 5: 100/245 Generator Loss: 15.469545
+2023-12-07 21:05: Train Epoch 5: 120/245 Generator Loss: 15.011769
+2023-12-07 21:05: Train Epoch 5: 140/245 Generator Loss: 15.413571
+2023-12-07 21:05: Train Epoch 5: 160/245 Generator Loss: 15.008879
+2023-12-07 21:05: Train Epoch 5: 180/245 Generator Loss: 14.084064
+2023-12-07 21:05: Train Epoch 5: 200/245 Generator Loss: 14.841815
+2023-12-07 21:05: Train Epoch 5: 220/245 Generator Loss: 13.393518
+2023-12-07 21:05: Train Epoch 5: 240/245 Generator Loss: 13.997816
+2023-12-07 21:05: **********Train Epoch 5: Averaged Generator Loss: 14.863427
+2023-12-07 21:05: **********Val Epoch 5: average Loss: 14.846866
+2023-12-07 21:06: **********test Epoch 5: average Loss: 15.211419
+2023-12-07 21:06: *********************************Current best model saved!
+2023-12-07 21:06: Train Epoch 6: 20/245 Generator Loss: 14.734643
+2023-12-07 21:06: Train Epoch 6: 40/245 Generator Loss: 14.820354
+2023-12-07 21:06: Train Epoch 6: 60/245 Generator Loss: 15.163176
+2023-12-07 21:06: Train Epoch 6: 80/245 Generator Loss: 14.346846
+2023-12-07 21:06: Train Epoch 6: 100/245 Generator Loss: 15.622800
+2023-12-07 21:06: Train Epoch 6: 120/245 Generator Loss: 14.352200
+2023-12-07 21:06: Train Epoch 6: 140/245 Generator Loss: 14.100419
+2023-12-07 21:06: Train Epoch 6: 160/245 Generator Loss: 13.958412
+2023-12-07 21:06: Train Epoch 6: 180/245 Generator Loss: 14.082966
+2023-12-07 21:06: Train Epoch 6: 200/245 Generator Loss: 14.431011
+2023-12-07 21:06: Train Epoch 6: 220/245 Generator Loss: 14.881529
+2023-12-07 21:07: Train Epoch 6: 240/245 Generator Loss: 13.477787
+2023-12-07 21:07: **********Train Epoch 6: Averaged Generator Loss: 14.513037
+2023-12-07 21:07: **********Val Epoch 6: average Loss: 14.638802
+2023-12-07 21:07: **********test Epoch 6: average Loss: 14.932363
+2023-12-07 21:07: *********************************Current best model saved!
+2023-12-07 21:07: Train Epoch 7: 20/245 Generator Loss: 14.207771
+2023-12-07 21:07: Train Epoch 7: 40/245 Generator Loss: 14.041327
+2023-12-07 21:07: Train Epoch 7: 60/245 Generator Loss: 14.993010
+2023-12-07 21:07: Train Epoch 7: 80/245 Generator Loss: 13.849117
+2023-12-07 21:07: Train Epoch 7: 100/245 Generator Loss: 14.219663
+2023-12-07 21:07: Train Epoch 7: 120/245 Generator Loss: 14.903591
+2023-12-07 21:07: Train Epoch 7: 140/245 Generator Loss: 13.986279
+2023-12-07 21:07: Train Epoch 7: 160/245 Generator Loss: 13.573384
+2023-12-07 21:08: Train Epoch 7: 180/245 Generator Loss: 14.276729
+2023-12-07 21:08: Train Epoch 7: 200/245 Generator Loss: 13.292827
+2023-12-07 21:08: Train Epoch 7: 220/245 Generator Loss: 13.568762
+2023-12-07 21:08: Train Epoch 7: 240/245 Generator Loss: 14.084550
+2023-12-07 21:08: **********Train Epoch 7: Averaged Generator Loss: 14.248111
+2023-12-07 21:08: **********Val Epoch 7: average Loss: 14.242912
+2023-12-07 21:08: **********test Epoch 7: average Loss: 14.645036
+2023-12-07 21:08: *********************************Current best model saved!
+2023-12-07 21:08: Train Epoch 8: 20/245 Generator Loss: 13.335388
+2023-12-07 21:08: Train Epoch 8: 40/245 Generator Loss: 14.959010
+2023-12-07 21:08: Train Epoch 8: 60/245 Generator Loss: 12.785547
+2023-12-07 21:08: Train Epoch 8: 80/245 Generator Loss: 13.972473
+2023-12-07 21:08: Train Epoch 8: 100/245 Generator Loss: 13.012939
+2023-12-07 21:08: Train Epoch 8: 120/245 Generator Loss: 13.824300
+2023-12-07 21:09: Train Epoch 8: 140/245 Generator Loss: 13.247379
+2023-12-07 21:09: Train Epoch 8: 160/245 Generator Loss: 14.232121
+2023-12-07 21:09: Train Epoch 8: 180/245 Generator Loss: 14.258412
+2023-12-07 21:09: Train Epoch 8: 200/245 Generator Loss: 14.930011
+2023-12-07 21:09: Train Epoch 8: 220/245 Generator Loss: 14.242009
+2023-12-07 21:09: Train Epoch 8: 240/245 Generator Loss: 14.245033
+2023-12-07 21:09: **********Train Epoch 8: Averaged Generator Loss: 14.054448
+2023-12-07 21:09: **********Val Epoch 8: average Loss: 14.175335
+2023-12-07 21:09: **********test Epoch 8: average Loss: 14.731072
+2023-12-07 21:09: *********************************Current best model saved!
+2023-12-07 21:09: Train Epoch 9: 20/245 Generator Loss: 13.857813
+2023-12-07 21:09: Train Epoch 9: 40/245 Generator Loss: 13.825062
+2023-12-07 21:09: Train Epoch 9: 60/245 Generator Loss: 14.354159
+2023-12-07 21:09: Train Epoch 9: 80/245 Generator Loss: 13.981602
+2023-12-07 21:10: Train Epoch 9: 100/245 Generator Loss: 13.156063
+2023-12-07 21:10: Train Epoch 9: 120/245 Generator Loss: 13.546543
+2023-12-07 21:10: Train Epoch 9: 140/245 Generator Loss: 14.869628
+2023-12-07 21:10: Train Epoch 9: 160/245 Generator Loss: 12.596952
+2023-12-07 21:10: Train Epoch 9: 180/245 Generator Loss: 13.793073
+2023-12-07 21:10: Train Epoch 9: 200/245 Generator Loss: 13.796178
+2023-12-07 21:10: Train Epoch 9: 220/245 Generator Loss: 12.697545
+2023-12-07 21:10: Train Epoch 9: 240/245 Generator Loss: 13.825895
+2023-12-07 21:10: **********Train Epoch 9: Averaged Generator Loss: 13.874156
+2023-12-07 21:10: **********Val Epoch 9: average Loss: 14.079652
+2023-12-07 21:10: **********test Epoch 9: average Loss: 14.651378
+2023-12-07 21:10: *********************************Current best model saved!
+2023-12-07 21:10: Train Epoch 10: 20/245 Generator Loss: 13.689974
+2023-12-07 21:10: Train Epoch 10: 40/245 Generator Loss: 13.687278
+2023-12-07 21:11: Train Epoch 10: 60/245 Generator Loss: 14.108272
+2023-12-07 21:11: Train Epoch 10: 80/245 Generator Loss: 13.074288
+2023-12-07 21:11: Train Epoch 10: 100/245 Generator Loss: 12.484414
+2023-12-07 21:11: Train Epoch 10: 120/245 Generator Loss: 12.275331
+2023-12-07 21:11: Train Epoch 10: 140/245 Generator Loss: 13.133210
+2023-12-07 21:11: Train Epoch 10: 160/245 Generator Loss: 13.502615
+2023-12-07 21:11: Train Epoch 10: 180/245 Generator Loss: 13.434262
+2023-12-07 21:11: Train Epoch 10: 200/245 Generator Loss: 14.924698
+2023-12-07 21:11: Train Epoch 10: 220/245 Generator Loss: 13.599754
+2023-12-07 21:11: Train Epoch 10: 240/245 Generator Loss: 13.282806
+2023-12-07 21:11: **********Train Epoch 10: Averaged Generator Loss: 13.752360
+2023-12-07 21:11: **********Val Epoch 10: average Loss: 13.966152
+2023-12-07 21:12: **********test Epoch 10: average Loss: 14.448720
+2023-12-07 21:12: *********************************Current best model saved!
+2023-12-07 21:12: Train Epoch 11: 20/245 Generator Loss: 13.691381
+2023-12-07 21:12: Train Epoch 11: 40/245 Generator Loss: 13.934565
+2023-12-07 21:12: Train Epoch 11: 60/245 Generator Loss: 13.407120
+2023-12-07 21:12: Train Epoch 11: 80/245 Generator Loss: 13.442983
+2023-12-07 21:12: Train Epoch 11: 100/245 Generator Loss: 13.040317
+2023-12-07 21:12: Train Epoch 11: 120/245 Generator Loss: 13.273141
+2023-12-07 21:12: Train Epoch 11: 140/245 Generator Loss: 13.632571
+2023-12-07 21:12: Train Epoch 11: 160/245 Generator Loss: 13.663522
+2023-12-07 21:12: Train Epoch 11: 180/245 Generator Loss: 12.695824
+2023-12-07 21:12: Train Epoch 11: 200/245 Generator Loss: 13.699921
+2023-12-07 21:12: Train Epoch 11: 220/245 Generator Loss: 12.470205
+2023-12-07 21:13: Train Epoch 11: 240/245 Generator Loss: 13.751929
+2023-12-07 21:13: **********Train Epoch 11: Averaged Generator Loss: 13.409633
+2023-12-07 21:13: **********Val Epoch 11: average Loss: 13.764733
+2023-12-07 21:13: **********test Epoch 11: average Loss: 14.422046
+2023-12-07 21:13: *********************************Current best model saved!
+2023-12-07 21:13: Train Epoch 12: 20/245 Generator Loss: 13.484852
+2023-12-07 21:13: Train Epoch 12: 40/245 Generator Loss: 13.998388
+2023-12-07 21:13: Train Epoch 12: 60/245 Generator Loss: 13.374382
+2023-12-07 21:13: Train Epoch 12: 80/245 Generator Loss: 13.494048
+2023-12-07 21:13: Train Epoch 12: 100/245 Generator Loss: 13.589878
+2023-12-07 21:13: Train Epoch 12: 120/245 Generator Loss: 13.309578
+2023-12-07 21:13: Train Epoch 12: 140/245 Generator Loss: 13.446784
+2023-12-07 21:13: Train Epoch 12: 160/245 Generator Loss: 13.117123
+2023-12-07 21:14: Train Epoch 12: 180/245 Generator Loss: 13.111688
+2023-12-07 21:14: Train Epoch 12: 200/245 Generator Loss: 12.222287
+2023-12-07 21:14: Train Epoch 12: 220/245 Generator Loss: 12.649777
+2023-12-07 21:14: Train Epoch 12: 240/245 Generator Loss: 13.022748
+2023-12-07 21:14: **********Train Epoch 12: Averaged Generator Loss: 13.351498
+2023-12-07 21:14: **********Val Epoch 12: average Loss: 13.756685
+2023-12-07 21:14: **********test Epoch 12: average Loss: 14.413874
+2023-12-07 21:14: *********************************Current best model saved!
+2023-12-07 21:14: Train Epoch 13: 20/245 Generator Loss: 13.704729
+2023-12-07 21:14: Train Epoch 13: 40/245 Generator Loss: 13.924675
+2023-12-07 21:14: Train Epoch 13: 60/245 Generator Loss: 12.605025
+2023-12-07 21:14: Train Epoch 13: 80/245 Generator Loss: 13.323883
+2023-12-07 21:14: Train Epoch 13: 100/245 Generator Loss: 13.344458
+2023-12-07 21:14: Train Epoch 13: 120/245 Generator Loss: 13.767922
+2023-12-07 21:15: Train Epoch 13: 140/245 Generator Loss: 13.415047
+2023-12-07 21:15: Train Epoch 13: 160/245 Generator Loss: 12.916841
+2023-12-07 21:15: Train Epoch 13: 180/245 Generator Loss: 12.638597
+2023-12-07 21:15: Train Epoch 13: 200/245 Generator Loss: 14.124592
+2023-12-07 21:15: Train Epoch 13: 220/245 Generator Loss: 12.725078
+2023-12-07 21:15: Train Epoch 13: 240/245 Generator Loss: 13.505323
+2023-12-07 21:15: **********Train Epoch 13: Averaged Generator Loss: 13.329301
+2023-12-07 21:15: **********Val Epoch 13: average Loss: 13.758545
+2023-12-07 21:15: **********test Epoch 13: average Loss: 14.424452
+2023-12-07 21:15: Train Epoch 14: 20/245 Generator Loss: 13.357809
+2023-12-07 21:15: Train Epoch 14: 40/245 Generator Loss: 12.481034
+2023-12-07 21:15: Train Epoch 14: 60/245 Generator Loss: 13.641262
+2023-12-07 21:15: Train Epoch 14: 80/245 Generator Loss: 12.878186
+2023-12-07 21:16: Train Epoch 14: 100/245 Generator Loss: 12.493251
+2023-12-07 21:16: Train Epoch 14: 120/245 Generator Loss: 13.162993
+2023-12-07 21:16: Train Epoch 14: 140/245 Generator Loss: 13.722887
+2023-12-07 21:16: Train Epoch 14: 160/245 Generator Loss: 14.053041
+2023-12-07 21:16: Train Epoch 14: 180/245 Generator Loss: 14.211159
+2023-12-07 21:16: Train Epoch 14: 200/245 Generator Loss: 13.626029
+2023-12-07 21:16: Train Epoch 14: 220/245 Generator Loss: 14.128701
+2023-12-07 21:16: Train Epoch 14: 240/245 Generator Loss: 13.020014
+2023-12-07 21:16: **********Train Epoch 14: Averaged Generator Loss: 13.308791
+2023-12-07 21:16: **********Val Epoch 14: average Loss: 13.737363
+2023-12-07 21:16: **********test Epoch 14: average Loss: 14.414443
+2023-12-07 21:16: *********************************Current best model saved!
+2023-12-07 21:16: Train Epoch 15: 20/245 Generator Loss: 13.522182
+2023-12-07 21:17: Train Epoch 15: 40/245 Generator Loss: 13.074742
+2023-12-07 21:17: Train Epoch 15: 60/245 Generator Loss: 13.759217
+2023-12-07 21:17: Train Epoch 15: 80/245 Generator Loss: 14.180732
+2023-12-07 21:17: Train Epoch 15: 100/245 Generator Loss: 13.677394
+2023-12-07 21:17: Train Epoch 15: 120/245 Generator Loss: 12.932717
+2023-12-07 21:17: Train Epoch 15: 140/245 Generator Loss: 13.178973
+2023-12-07 21:17: Train Epoch 15: 160/245 Generator Loss: 13.228475
+2023-12-07 21:17: Train Epoch 15: 180/245 Generator Loss: 12.971105
+2023-12-07 21:17: Train Epoch 15: 200/245 Generator Loss: 13.393373
+2023-12-07 21:17: Train Epoch 15: 220/245 Generator Loss: 13.155072
+2023-12-07 21:17: Train Epoch 15: 240/245 Generator Loss: 13.463264
+2023-12-07 21:17: **********Train Epoch 15: Averaged Generator Loss: 13.293517
+2023-12-07 21:17: **********Val Epoch 15: average Loss: 13.737758
+2023-12-07 21:18: **********test Epoch 15: average Loss: 14.416079
+2023-12-07 21:18: Train Epoch 16: 20/245 Generator Loss: 13.426274
+2023-12-07 21:18: Train Epoch 16: 40/245 Generator Loss: 13.048001
+2023-12-07 21:18: Train Epoch 16: 60/245 Generator Loss: 12.700353
+2023-12-07 21:18: Train Epoch 16: 80/245 Generator Loss: 12.820577
+2023-12-07 21:18: Train Epoch 16: 100/245 Generator Loss: 13.357226
+2023-12-07 21:18: Train Epoch 16: 120/245 Generator Loss: 13.140709
+2023-12-07 21:18: Train Epoch 16: 140/245 Generator Loss: 14.213958
+2023-12-07 21:18: Train Epoch 16: 160/245 Generator Loss: 13.957030
+2023-12-07 21:18: Train Epoch 16: 180/245 Generator Loss: 13.014772
+2023-12-07 21:18: Train Epoch 16: 200/245 Generator Loss: 13.444583
+2023-12-07 21:18: Train Epoch 16: 220/245 Generator Loss: 13.425386
+2023-12-07 21:19: Train Epoch 16: 240/245 Generator Loss: 11.924917
+2023-12-07 21:19: **********Train Epoch 16: Averaged Generator Loss: 13.277841
+2023-12-07 21:19: **********Val Epoch 16: average Loss: 13.738899
+2023-12-07 21:19: **********test Epoch 16: average Loss: 14.439482
+2023-12-07 21:19: Train Epoch 17: 20/245 Generator Loss: 12.620699
+2023-12-07 21:19: Train Epoch 17: 40/245 Generator Loss: 12.776088
+2023-12-07 21:19: Train Epoch 17: 60/245 Generator Loss: 12.590366
+2023-12-07 21:19: Train Epoch 17: 80/245 Generator Loss: 13.445866
+2023-12-07 21:19: Train Epoch 17: 100/245 Generator Loss: 12.470270
+2023-12-07 21:19: Train Epoch 17: 120/245 Generator Loss: 12.455480
+2023-12-07 21:19: Train Epoch 17: 140/245 Generator Loss: 13.846893
+2023-12-07 21:19: Train Epoch 17: 160/245 Generator Loss: 14.211723
+2023-12-07 21:20: Train Epoch 17: 180/245 Generator Loss: 13.756395
+2023-12-07 21:20: Train Epoch 17: 200/245 Generator Loss: 13.099792
+2023-12-07 21:20: Train Epoch 17: 220/245 Generator Loss: 13.248460
+2023-12-07 21:20: Train Epoch 17: 240/245 Generator Loss: 13.643287
+2023-12-07 21:20: **********Train Epoch 17: Averaged Generator Loss: 13.260398
+2023-12-07 21:20: **********Val Epoch 17: average Loss: 13.735619
+2023-12-07 21:20: **********test Epoch 17: average Loss: 14.423218
+2023-12-07 21:20: *********************************Current best model saved!
+2023-12-07 21:20: Train Epoch 18: 20/245 Generator Loss: 12.802765
+2023-12-07 21:20: Train Epoch 18: 40/245 Generator Loss: 13.199726
+2023-12-07 21:20: Train Epoch 18: 60/245 Generator Loss: 14.149681
+2023-12-07 21:20: Train Epoch 18: 80/245 Generator Loss: 13.883333
+2023-12-07 21:20: Train Epoch 18: 100/245 Generator Loss: 12.994210
+2023-12-07 21:20: Train Epoch 18: 120/245 Generator Loss: 12.859681
+2023-12-07 21:21: Train Epoch 18: 140/245 Generator Loss: 13.548010
+2023-12-07 21:21: Train Epoch 18: 160/245 Generator Loss: 13.148148
+2023-12-07 21:21: Train Epoch 18: 180/245 Generator Loss: 13.484560
+2023-12-07 21:21: Train Epoch 18: 200/245 Generator Loss: 13.285892
+2023-12-07 21:21: Train Epoch 18: 220/245 Generator Loss: 13.766464
+2023-12-07 21:21: Train Epoch 18: 240/245 Generator Loss: 14.065121
+2023-12-07 21:21: **********Train Epoch 18: Averaged Generator Loss: 13.247607
+2023-12-07 21:21: **********Val Epoch 18: average Loss: 13.708130
+2023-12-07 21:21: **********test Epoch 18: average Loss: 14.410491
+2023-12-07 21:21: *********************************Current best model saved!
+2023-12-07 21:21: Train Epoch 19: 20/245 Generator Loss: 12.844680
+2023-12-07 21:21: Train Epoch 19: 40/245 Generator Loss: 13.063639
+2023-12-07 21:21: Train Epoch 19: 60/245 Generator Loss: 13.149791
+2023-12-07 21:21: Train Epoch 19: 80/245 Generator Loss: 13.705158
+2023-12-07 21:22: Train Epoch 19: 100/245 Generator Loss: 13.793460
+2023-12-07 21:22: Train Epoch 19: 120/245 Generator Loss: 13.116638
+2023-12-07 21:22: Train Epoch 19: 140/245 Generator Loss: 12.900304
+2023-12-07 21:22: Train Epoch 19: 160/245 Generator Loss: 14.016634
+2023-12-07 21:22: Train Epoch 19: 180/245 Generator Loss: 13.198276
+2023-12-07 21:22: Train Epoch 19: 200/245 Generator Loss: 13.449421
+2023-12-07 21:22: Train Epoch 19: 220/245 Generator Loss: 13.336430
+2023-12-07 21:22: Train Epoch 19: 240/245 Generator Loss: 13.276801
+2023-12-07 21:22: **********Train Epoch 19: Averaged Generator Loss: 13.230240
+2023-12-07 21:22: **********Val Epoch 19: average Loss: 13.734034
+2023-12-07 21:22: **********test Epoch 19: average Loss: 14.446511
+2023-12-07 21:22: Train Epoch 20: 20/245 Generator Loss: 13.325799
+2023-12-07 21:23: Train Epoch 20: 40/245 Generator Loss: 12.847415
+2023-12-07 21:23: Train Epoch 20: 60/245 Generator Loss: 12.221851
+2023-12-07 21:23: Train Epoch 20: 80/245 Generator Loss: 12.882725
+2023-12-07 21:23: Train Epoch 20: 100/245 Generator Loss: 13.427343
+2023-12-07 21:23: Train Epoch 20: 120/245 Generator Loss: 13.234916
+2023-12-07 21:23: Train Epoch 20: 140/245 Generator Loss: 13.645169
+2023-12-07 21:23: Train Epoch 20: 160/245 Generator Loss: 13.536322
+2023-12-07 21:23: Train Epoch 20: 180/245 Generator Loss: 13.671630
+2023-12-07 21:23: Train Epoch 20: 200/245 Generator Loss: 13.547697
+2023-12-07 21:23: Train Epoch 20: 220/245 Generator Loss: 13.548742
+2023-12-07 21:23: Train Epoch 20: 240/245 Generator Loss: 13.791264
+2023-12-07 21:23: **********Train Epoch 20: Averaged Generator Loss: 13.216423
+2023-12-07 21:23: **********Val Epoch 20: average Loss: 13.729264
+2023-12-07 21:24: **********test Epoch 20: average Loss: 14.445743
+2023-12-07 21:24: Total training time: 24.0967min, best loss: 13.708130
+2023-12-07 21:24: Saving current best model to /mnt/workspace/MGSTGNN/exps/logs/PEMS03/20231207205955/best_model.pth
+2023-12-07 21:24: Saving current best model to /mnt/workspace/MGSTGNN/exps/logs/PEMS03/20231207205955/best_test_model.pth
+2023-12-07 21:24: Horizon 01, MAE: 12.1625, RMSE: 18.9902, MAPE: 12.5649%
+2023-12-07 21:24: Horizon 02, MAE: 12.7864, RMSE: 20.3375, MAPE: 13.0874%
+2023-12-07 21:24: Horizon 03, MAE: 13.3008, RMSE: 21.3935, MAPE: 13.5438%
+2023-12-07 21:24: Horizon 04, MAE: 13.7260, RMSE: 22.2313, MAPE: 13.9974%
+2023-12-07 21:24: Horizon 05, MAE: 14.0943, RMSE: 22.9482, MAPE: 14.2943%
+2023-12-07 21:24: Horizon 06, MAE: 14.4286, RMSE: 23.5912, MAPE: 14.5756%
+2023-12-07 21:24: Horizon 07, MAE: 14.7528, RMSE: 24.2212, MAPE: 14.8312%
+2023-12-07 21:24: Horizon 08, MAE: 15.0275, RMSE: 24.7462, MAPE: 15.0389%
+2023-12-07 21:24: Horizon 09, MAE: 15.2861, RMSE: 25.2180, MAPE: 15.3224%
+2023-12-07 21:24: Horizon 10, MAE: 15.5282, RMSE: 25.6504, MAPE: 15.5000%
+2023-12-07 21:24: Horizon 11, MAE: 15.7753, RMSE: 26.0871, MAPE: 15.6190%
+2023-12-07 21:24: Horizon 12, MAE: 16.0731, RMSE: 26.5672, MAPE: 15.9257%
+2023-12-07 21:24: Average Horizon, MAE: 14.4118, RMSE: 23.6090, MAPE: 14.5250%
+2023-12-07 21:24: This is best_test_model
+2023-12-07 21:24: Horizon 01, MAE: 12.1625, RMSE: 18.9902, MAPE: 12.5649%
+2023-12-07 21:24: Horizon 02, MAE: 12.7864, RMSE: 20.3375, MAPE: 13.0874%
+2023-12-07 21:24: Horizon 03, MAE: 13.3008, RMSE: 21.3935, MAPE: 13.5438%
+2023-12-07 21:24: Horizon 04, MAE: 13.7260, RMSE: 22.2313, MAPE: 13.9974%
+2023-12-07 21:24: Horizon 05, MAE: 14.0943, RMSE: 22.9482, MAPE: 14.2943%
+2023-12-07 21:24: Horizon 06, MAE: 14.4286, RMSE: 23.5912, MAPE: 14.5756%
+2023-12-07 21:24: Horizon 07, MAE: 14.7528, RMSE: 24.2212, MAPE: 14.8312%
+2023-12-07 21:24: Horizon 08, MAE: 15.0275, RMSE: 24.7462, MAPE: 15.0389%
+2023-12-07 21:24: Horizon 09, MAE: 15.2861, RMSE: 25.2180, MAPE: 15.3224%
+2023-12-07 21:24: Horizon 10, MAE: 15.5282, RMSE: 25.6504, MAPE: 15.5000%
+2023-12-07 21:24: Horizon 11, MAE: 15.7753, RMSE: 26.0871, MAPE: 15.6190%
+2023-12-07 21:24: Horizon 12, MAE: 16.0731, RMSE: 26.5672, MAPE: 15.9257%
+2023-12-07 21:24: Average Horizon, MAE: 14.4118, RMSE: 23.6090, MAPE: 14.5250%
